@@ -1,0 +1,213 @@
+@media (max-width: 767px){
+    body {
+        font-size: 14px;
+    }
+    .Grid {
+        margin: 0 15px;
+        max-width: -webkit-fill-available;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        align-items: center;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+        width: -webkit-fill-available;
+        flex-direction: column;
+        align-content: center;
+        gap: 12px;
+    }
+img{
+    max-width: 100%;
+    height: auto;
+}
+    .Logo{
+        height: 30px;
+    }
+
+    .ul{
+        padding: 0;
+       
+    }
+    .slider-banner img {
+        margin-left: 15px;
+        width: auto;
+        height: 150px;
+    }
+    .text-content {
+        padding: 12px 5px;
+    }
+    .desktop-only{
+        display: none; 
+        
+    }
+    button{
+        height: 36px;
+    }
+    .carousel-control-prev, .carousel-control-next{
+        display: none;
+    }
+    .tab-container {
+        margin-top: 180px;
+        width: -webkit-fill-available;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .arrow-section{
+            max-width: -webkit-fill-available;
+            align-items: flex-start;
+            display: flex;
+    }
+    .table-head{
+        display: none;
+        
+    }
+    .tab-head{
+        display: flex;
+        justify-content: center;
+    }
+    .tab-content{
+        padding: 0;
+    }
+  
+   .team-score{
+    display: flex;
+    width: 360px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+   }
+   .team{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+   }
+   .team-name{
+    width: 80px;
+   }
+   .score{
+    display: flex;
+    width: 50px;
+    padding: 6px ;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+   }
+    .hd-only{
+        display: none;
+    }
+    .sm-only{
+        display: flex;
+        width: 400px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-top: 12px;
+    }
+    .tab-card{
+        display: flex;
+        padding: 16px 24px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 16px 12px;
+        align-self: stretch;
+        flex-wrap: wrap;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        background: rgba(255, 255, 255, 0.03);
+    }
+    .time-location{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 6px;
+        flex-direction: row;
+    }
+    .place{
+        width: 100%;
+        text-align: right;
+    }
+    .active-btn{
+        width: 160px;
+    }
+    .Default-btn{
+        width: 160px;
+    }
+  
+    input{
+       display: contents;
+    }
+    .date-navigation{
+        justify-content: center;
+        margin-top: 16px;
+    }
+    .Info-card{
+        display: flex;
+        flex-direction: column;
+        width: -webkit-fill-available;
+     
+    }
+    .Card-1, .Card-2, .Card-3{
+        width:  -webkit-fill-available;
+     
+    }
+    .follow-club-title{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 12px;
+    }
+    .features {
+        width: -webkit-fill-available;
+        height: auto;
+        padding: 48px 15px;
+    }
+    .features-cnt {
+        display: flex;
+       
+        gap: 16px;
+        padding: 60px 0;
+        flex-direction: column;
+    }
+    .features-info{
+        width: -webkit-fill-available;
+    }
+
+    .info-heading2{
+        width: auto;
+        font-size: 32px;
+    }
+    .card-p{
+        width: auto;
+    }
+    .features-card{
+        height: auto;
+    }
+    .foot {
+        width: -webkit-fill-available;
+        margin: 32px 15px;
+    }
+    .copyright {
+        margin: 32px 15px 20px 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        gap: 16px;
+    }
+    .Terms{
+        width: -webkit-fill-available ;
+    }
+    .copyright-text{
+        width: -webkit-fill-available;
+
+    }
+}

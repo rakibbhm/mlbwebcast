@@ -29,16 +29,16 @@ function showTab(tabId, element) {
 
 //Slider carusaoul Content
 
-// function changeDate(delta) {
-//     var dateDisplay = document.getElementById('date-display');
-//     var currentDate = new Date(dateDisplay.textContent);
-//     currentDate.setDate(currentDate.getDate() + delta);
-//     dateDisplay.textContent = currentDate.toISOString().split('T')[0];
-// }
+function changeDate(delta) {
+    var dateDisplay = document.getElementById('date-display');
+    var currentDate = new Date(dateDisplay.textContent);
+    currentDate.setDate(currentDate.getDate() + delta);
+    dateDisplay.textContent = currentDate.toISOString().split('T')[0];
+}
 
-// function showDatePicker() {
-//     document.getElementById('date-display')._flatpickr.open();
-// }
+function showDatePicker() {
+    document.getElementById('date-display')._flatpickr.open();
+}
 
 // const prevButton = document.querySelector('.carousel-control-prev');
 // const nextButton = document.querySelector('.carousel-control-next');

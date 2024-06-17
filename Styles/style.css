@@ -31,7 +31,8 @@ nav ul, .nav-item {
     display: flex;
     align-items: center;
     color: var(--Gray-200, #CDD4D3);
-    font-size: 16px;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-item {
@@ -41,10 +42,10 @@ nav ul, .nav-item {
 
 .nav-item:hover, .nav-item-active {
     color: var(--Yellow-500, #F9E006);
-    font-size: 16px;
+   
     font-weight: 500;
 }
-h1 {
+.tab-head {
     color: var(--Gray-200, #CDD4D3);
     font-family: Inter;
     font-size: 26px;
@@ -152,7 +153,7 @@ align-items: center;
     width: 140px;
     color: var(--Gray-300, #AAB6B4);
 font-family: Inter;
-font-size: 16px;
+
 font-style: normal;
 font-weight: 600;
 line-height: 120%; /* 19.2px */
@@ -173,7 +174,6 @@ color: var(--Gray-200, #CDD4D3);
 
 /* Paragraf/Medium */
 font-family: Inter;
-font-size: 16px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
@@ -217,7 +217,7 @@ height: 17px;
     backdrop-filter: blur(10px);
     color: #EEE;
     font-family: Inter;
-    font-size: 16px;
+  
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -268,8 +268,10 @@ height: 17px;
 .Info-card {
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
     gap: 24px;
     margin-top: 48px;
+    justify-content: center;
 }
 
 .Card-1 {
@@ -295,7 +297,7 @@ flex-shrink: 0;
 border-radius: 24px;
 border: 2px solid rgba(55, 114, 250, 0.33);
 background: rgba(255, 255, 255, 0.05);
-margin: 32px 27px;
+
 }
 .card1-text{
     display: flex;
@@ -316,7 +318,7 @@ line-height: normal;
 .c1p{
     color:  #2152EF;
     font-family: Inter;
-    font-size: 16px;
+   
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -348,7 +350,7 @@ flex-shrink: 0;
 border-radius: 24px;
 border: 2px solid rgba(252, 255, 137, 0.30);
 background: rgba(255, 255, 255, 0.05);
-margin: 32px 27px;
+
 color: #F9E006;
 }
 .card2-text{
@@ -370,7 +372,7 @@ line-height: normal;
 .c2p{
     color:  #F9E006;
     font-family: Inter;
-    font-size: 16px;
+    
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -401,7 +403,7 @@ flex-shrink: 0;
 border-radius: 24px;
 border: 2px solid rgba(255, 148, 148, 0.30);
 background: rgba(255, 255, 255, 0.05);
-margin: 32px 27px;
+
 color: #D70000;
 }
 .card3-text{
@@ -423,10 +425,15 @@ line-height: normal;
 .c3p{
     color:  #D70000;
     font-family: Inter;
-    font-size: 16px;
+    
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+.Card-1, .Card-2, .Card-3{
+    align-items: center;
+    padding-left: 24px;
+    gap: 20px;
 }
 .follow-club {
     display: flex;
@@ -437,7 +444,7 @@ line-height: normal;
     gap: 32px;
     align-self: stretch;
     margin: 48px 0;
-    width: 1320px;
+    width: -webkit-fill-available;
 }
 
 .follow-club-title{
@@ -451,6 +458,7 @@ line-height: normal;
 }
 .clubs-header{
     display: flex;
+    flex-wrap: wrap;
 padding-right: var(--Text-Gap-Medium-30, 30px);
 justify-content: space-between;
 align-items: center;
@@ -462,7 +470,13 @@ align-items: center;
 gap: 16px;
 
 }
-
+.Terms{
+    width: 392px; 
+    text-align: right;
+}
+.copyright-text{
+    width: 392px;
+}
 .arrow-btn{
     width: 42px;
     height: 42px;
@@ -560,7 +574,7 @@ letter-spacing: -0.63px;
     align-self: stretch;
     color: var(--Gray-200, #CDD4D3);
 font-family: Inter;
-font-size: 16px;
+
 font-style: normal;
 font-weight: 400;
 line-height: 140%; /* 22.4px */
@@ -824,15 +838,12 @@ a:hover {
     margin-bottom: 10px;
 }
 
-.text-content .h1 {
+.text-content  {
     font-size: 2em;
     margin-bottom: 10px;
 }
 
-.text-content .body-regular {
-    font-size: 1em;
-    margin-bottom: 20px;
-}
+
 
 .text-content button {
     display: inline-flex;
@@ -864,15 +875,7 @@ font-weight: 700;
 line-height: normal;
 }
 
-.h1{
-    color: #FFF;
-font-family: Inter;
-font-size: 40px;
-font-style: normal;
-font-weight: 600;
-line-height: 45px; /* 112.5% */
-margin-top: 6px;
-}
+
 
 .text-content{
  padding: 70px 45px;
@@ -1029,7 +1032,9 @@ font-style: normal;
 font-weight: 500;
 line-height: normal;
 }
-
+.sm-only{
+    display: none;
+}
 button:hover{
     color: #6a89f0;
     font-family: Inter;
@@ -1048,7 +1053,7 @@ box-shadow: 3px 3px 16px 0px rgba(0, 0, 0, 0.06);
 backdrop-filter: blur(10px);
 color: var(--Gray-200, #CDD4D3);
 font-family: Inter;
-font-size: 16px;
+
 font-style: normal;
 font-weight: 600;
 line-height: normal;
@@ -1076,7 +1081,7 @@ letter-spacing: -0.54px;
     width: 872px;
     color: var(--Gray-200, #CDD4D3);
 font-family: Inter;
-font-size: 16px;
+
 font-style: normal;
 font-weight: 400;
 line-height: 140%; /* 22.4px */
@@ -1086,7 +1091,7 @@ margin: 0px;
 .link-p{
     color: var(--Gray-200, #CDD4D3);
 font-family: Inter;
-font-size: 16px;
+
 font-style: normal;
 font-weight: 400;
 line-height: 140%;
@@ -1110,7 +1115,7 @@ text-decoration-line: underline;
 
     /* Paragraf/Regular */
     font-family: Inter;
-    font-size: 16px;
+   
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1128,7 +1133,7 @@ text-decoration-line: underline;
 
 /* Paragraf/Medium */
     font-family: Inter;
-    font-size: 16px;
+
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -1140,7 +1145,7 @@ text-decoration-line: underline;
 
 /* Paragraf/Medium */
     font-family: Inter;
-    font-size: 16px;
+  
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -1202,7 +1207,7 @@ position: absolute;
  
   
     cursor: pointer;
-    font-size: 16px;
+    
     display: flex;
     width: 42px;
     height: 42px;
@@ -1216,7 +1221,7 @@ position: absolute;
 
 #date-display {
     margin: 0 10px;
-    font-size: 16px;
+  
     cursor: pointer;
     display: flex;
 padding: 10px var(--Text-Gap-Medium-30, 30px);
