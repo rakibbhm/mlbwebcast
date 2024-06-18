@@ -272,10 +272,11 @@ img{
     }
     .Steam-body{
         flex-wrap: wrap ;
+        justify-content: center;
     }
     .Video-box {
         height: 100%;
-        width: 400px;
+        width: 100%;
     }
     .Heading-pro{
         font-size: 18px;
@@ -304,4 +305,8 @@ img{
     .follow-club{
         margin: 28px 0;
     }
+    .Ad-box{
+        width: auto;
+    }
+    
 }
