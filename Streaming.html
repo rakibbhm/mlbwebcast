@@ -2,17 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=100%, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MLB Webcast</title>
-    <link rel="stylesheet" href="/Styles/Style.css">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/Responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="/Script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="icon" type="image/x-icon" href="/Assets/faviconwebp.webp">
 </head>
 <body>
     <div class="Grid">
         <nav>
-            <a href="index.html"><img src="Assets/Logo.png" alt="MLB Logo"></a>  
+            <a href="index.html" ><img class="Logo" src="Assets/Logo.png" alt="MLB Logo"></a>  
             <ul>
-                <li><a href="index.html" style="text-decoration: none;"><span class="nav-item-active">Home</span></a></li>
-                <li><a href="Streaming.html" style="text-decoration: none;"><span class="nav-item">MLB TV</span></a></li>
+                <li><a href="index.html" style="text-decoration: none;"><span class="nav-item">Home</span></a></li>
+                <li><a href="Streaming.html" style="text-decoration: none;"><span class="nav-item-active">MLB TV</span></a></li>
                 <li><a href="Streaming.html" style="text-decoration: none;"><span class="nav-item">Live Matches</span></a></li>
             </ul>
         </nav>
@@ -22,16 +30,13 @@
     
     <section class="follow-club">
         <div class="clubs-header">
-            <span class="follow-club-title">
-                🎮 Pick you team
-            </span>
-            <div display: flex; justify-content: center; margin-top: 16px;>
+            <span class="follow-club-title">🎮 Pick your team</span>
+            <div style="display: flex; justify-content: center; margin-top: 16px;">
                 <button class="table-button">See All</button>
             </div>
-              <div class="arrow-icon">
-               <span class="arrow-btn"><img src="Assets/arrow left.svg" alt=""></span> 
-                
-               <span class="arrow-btn"><img src="Assets/arrow right active.svg" alt=""></span> 
+            <div class="arrow-icon">
+                <span class="arrow-btn"><img src="Assets/arrow left.svg" alt="Left Arrow"></span> 
+                <span class="arrow-btn"><img src="Assets/arrow right active.svg" alt="Right Arrow"></span> 
             </div>  
         </div>
         <div class="images-club">
@@ -68,19 +73,18 @@
             <span class="club-single"><img src="Assets/16.svg" alt="Club Image 6"></span> 
             <span class="club-single"><img src="Assets/17.svg" alt="Club Image 7"></span> 
         </div>
-
     </section>
     <div class="Steam-body">
         <div class="video-player">
           <div class="Playing-teams">
             <div class="team-1">
-                <img src="Assets/Image10.svg" alt="">
+                <img src="Assets/10.svg" alt="">
                 <span class="team-name-1">ARIZONA DIAMONDBACKS</span>
             </div>
             <div class="VS">VS</div>
             <div class="team-1"> 
                 <span class="team-name-1">LOS ANGELES ANGELS</span>
-                <img src="Assets/Image9.svg" alt="">
+                <img src="Assets/9.svg" alt="">
             
             </div>
            
@@ -143,11 +147,11 @@
      MLB trademarks are property of Major League Baseball and respective teams. All other trademarks belong to their respective holders. Information provided is for informational purposes only and not legal advice. Site owner/operators are not responsible for errors or inaccuracies in information.
     </span>
     <div class="copyright">
-        <span style="width: 392px;">Copyright © MLB LIVE STREAM FREE ONLINE NO SIGN-UP</span>
-        <img src="Assets/image 2.svg" alt="">
-        <p style="width: 392px; text-align: right;">Terms of Service          Privacy Policy</p>
+        <span class="copyright-text">Copyright © MLB LIVE STREAM FREE ONLINE NO SIGN-UP</span>
+        <a href="index.html" ><img class="Logo" src="Assets/Logo.png" alt="MLB Logo"></a>  
+        <div class="">Terms of Service          Privacy Policy</div>
     </div>
-</footer>
+</footer>  
 
 
 </body>

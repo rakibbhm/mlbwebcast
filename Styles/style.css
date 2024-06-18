@@ -952,6 +952,9 @@ line-height: 120%; /* 26.4px */
     line-height: 45px; /* 102.273% */
 }
 .Video-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 872px;
 height: 460px;
 border-radius: var(--No-Gap-0, 0px);
@@ -966,9 +969,9 @@ padding: 10px;
 justify-content: center;
 align-items: center;
 gap: 10px;
-position: relative;
-right: -405.5px;
-top: 40px;
+position: absolute;
+/* right: -405.5px;
+top: 40px; */
 border-radius: var(--Text-Gap-big-42, 42px);
 background: rgba(249, 224, 6, 0.10);
 backdrop-filter: blur(15px);
@@ -1013,6 +1016,7 @@ line-height: normal;
     display: flex;
 align-items: flex-start;
 gap: 20px;  
+justify-content: center;
 }
 button{
     display: flex;
@@ -1067,7 +1071,7 @@ align-self: stretch;
 
 }
 .Heading-Desclimer{
-    width: 763px;
+    width: fit-content;
     color: var(--Gray-100, #E5E8E7);
 font-family: Inter;
 font-size: 36px;
@@ -1078,7 +1082,7 @@ letter-spacing: -0.54px;
 }
 .p{
     align-self: stretch;
-    width: 872px;
+    
     color: var(--Gray-200, #CDD4D3);
 font-family: Inter;
 

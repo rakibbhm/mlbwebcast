@@ -1,4 +1,18 @@
-@media (max-width: 767px){
+@media only screen and (max-width: 400px) {
+    body {
+        font-size: 14px;
+        overflow-x: hidden;
+    }
+    .carousel-container{
+        max-width: 340px; !important
+        margin: 0 12px;
+    }
+  
+   
+}
+
+
+@media only screen and (max-width: 767px){
     body {
         font-size: 14px;
         overflow-x: hidden; !important
@@ -35,8 +49,8 @@ img{
     }
 
     .slider-banner img {
-        margin-left: 15px;
-        width: auto;
+        margin: 0;
+        width: 98%;
         height: 150px;
     }
     .text-content {
@@ -53,7 +67,8 @@ img{
         display: none;
     }
      .carousel-container{
-        max-width: -webkit-fill-available;
+        max-width: 400px;
+
     }
     .carousel-item{
         width: 400px;
@@ -130,7 +145,7 @@ img{
     }
     .sm-only{
         display: flex;
-        width: 400px;
+        width: fit-content;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -236,5 +251,57 @@ img{
     .copyright-text{
         width: -webkit-fill-available;
 
+    }
+    /* streaming page css start here */
+
+    .Container-body{
+        width: -webkit-fill-available;
+    }
+    .video-player {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: -webkit-fill-available;
+    }
+    .Playing-teams{
+        width: -webkit-fill-available;
+        display: flex;
+        flex-direction: column;
+        margin: 0 10px;
+    }
+    .Steam-body{
+        flex-wrap: wrap ;
+    }
+    .Video-box {
+        height: 100%;
+        width: 400px;
+    }
+    .Heading-pro{
+        font-size: 18px;
+    }
+    .pro {
+       
+        padding: 7px 10px;
+        
+        gap: 10px;
+        border-radius: var(--Special-Gap-01-20, 12px);
+    }
+    .Link-btn {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .Heading-Desclimer{
+        font-size: 28px;
+        text-align: center;
+    }
+    .p{
+        text-align: center;
+    }
+    .follow-club{
+        margin: 28px 0;
     }
 }

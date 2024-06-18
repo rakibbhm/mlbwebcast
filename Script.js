@@ -74,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Carousel elements not found');
         return;
     }
-
     let currentIndex = 0;
     const totalItems = carouselItems.length;
     const slideInterval = 300000; // Slide every 3 seconds
