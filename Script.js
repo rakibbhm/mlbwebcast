@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     flatpickr("#date-display", {
-        dateFormat: "Y-m-d",
+        dateFormat: "d-m-Y",
         onChange: function(selectedDates, dateStr, instance) {
             document.getElementById('date-display').textContent = dateStr;
         }
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentIndex = 0;
     const totalItems = carouselItems.length;
-    const slideInterval = 3000; // Slide every 3 seconds
+    const slideInterval = 300000; // Slide every 3 seconds
 
     function updateCarousel() {
         carouselItems.forEach((item, index) => {

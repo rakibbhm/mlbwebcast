@@ -1,6 +1,7 @@
 @media (max-width: 767px){
     body {
         font-size: 14px;
+        overflow-x: hidden; !important
     }
     .Grid {
         margin: 0 15px;
@@ -32,6 +33,7 @@ img{
         padding: 0;
        
     }
+
     .slider-banner img {
         margin-left: 15px;
         width: auto;
@@ -50,6 +52,28 @@ img{
     .carousel-control-prev, .carousel-control-next{
         display: none;
     }
+     .carousel-container{
+        max-width: -webkit-fill-available;
+    }
+    .carousel-item{
+        width: 400px;
+    }
+    .carousel-item.prev, .carousel-item.next{
+        display: none;
+    }
+   
+    .carousel-item.active{
+        max-width: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .slider-banner {
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    } 
     .tab-container {
         margin-top: 180px;
         width: -webkit-fill-available;
@@ -73,7 +97,10 @@ img{
     .tab-content{
         padding: 0;
     }
-  
+  .tab-content.active {
+    display: flex;
+    flex-direction: column;
+}
    .team-score{
     display: flex;
     width: 360px;
