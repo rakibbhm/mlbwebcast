@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     let currentIndex = 0;
     const totalItems = carouselItems.length;
-    const slideInterval = 300000; // Slide every 3 seconds
+    const slideInterval = 3000; // Slide every 3 seconds
 
     function updateCarousel() {
         carouselItems.forEach((item, index) => {

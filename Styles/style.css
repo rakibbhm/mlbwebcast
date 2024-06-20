@@ -1,3 +1,4 @@
+
 body {
     overflow-x: hidden;
     background: #110E23;
@@ -283,8 +284,9 @@ height: 17px;
     float: left;
     border: 2px solid rgba(10, 48, 255, 0.83);
     background: rgba(26, 62, 254, 0.11);
-    background-image: url(../Assets/card-1-bg.png);
+    background-image: url(../Assets/Card-2.png);
     box-sizing: border-box;
+    background-size: cover;
 }
 .arrow-right-s-line{
     display: flex;
@@ -335,6 +337,7 @@ display: flex;
 float: left;
 border-radius: 20px;
 box-sizing: border-box;
+background-size: cover;
 
 
 
@@ -388,6 +391,7 @@ display: flex;
 float: left;
 border-radius: 20px;
 box-sizing: border-box;
+background-size: cover;
 
 
 
