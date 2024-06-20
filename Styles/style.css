@@ -643,10 +643,9 @@ font-style: normal;
 font-weight: 300;
 line-height: 20px; /* 142.857% */
 }
-.foot {
-    width: 1320px; 
+.foot { 
     flex-shrink: 0;
-    margin: 48px 40px 30px;
+    margin: 48px 300px 30px;
     text-align: center;
     display: flex;
     flex-direction: column;
