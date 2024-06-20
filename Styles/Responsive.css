@@ -1,18 +1,311 @@
-@media only screen and (max-width: 400px) {
+
+@media(max-width: 400px){
     body {
         font-size: 14px;
-        overflow-x: hidden;
+        overflow-x: hidden; !important
     }
-    .carousel-container{
-        max-width: 340px; !important
-        margin: 0 12px;
+    .Grid {
+        margin: 0 12.5px;
+        max-width: -webkit-fill-available;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        align-items: center;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+        width: -webkit-fill-available;
+        flex-direction: column;
+        align-content: center;
+        gap: 12px;
+    }
+img{
+    max-width: 100%;
+    height: auto;
+}
+    .Logo{
+        height: 30px;
+    }
+
+    .ul{
+        padding: 0;
+       
+    }
+
+    .slider-banner img {
+        margin: 0;
+        width: 98%;
+        height: auto;
+    }
+    .text-content {
+        padding: 12px 5px;
+    }
+    .desktop-only{
+        display: none; 
+        
+    }
+    button{
+        height: 36px;
+    }
+    .carousel-control-prev, .carousel-control-next{
+        display: none;
+    }
+     .carousel-container{
+        max-width: 350px;
+        
+
+    }
+    .carousel-item{
+        width: 350px;
+    }
+    .carousel-item.prev, .carousel-item.next{
+        display: none;
+    }
+   
+    .carousel-item.active{
+        max-width: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .slider-banner {
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    } 
+    .tab-container {
+        margin-top: 160px;
+        width: 350px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .arrow-section{
+            max-width: -webkit-fill-available;
+            align-items: flex-start;
+            display: flex;
+    }
+    .table-head{
+        display: none;
+        
+    }
+    .tab-head{
+        display: flex;
+        justify-content: center;
+    }
+    .tab-content{
+        padding: 0;
+    }
+  .tab-content.active {
+    display: flex;
+    flex-direction: column;
+}
+   .team-score{
+    display: flex;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+   }
+   .team{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100px;
+   }
+   .team-name{
+    width: 60px;
+   }
+   .score{
+    display: flex;
+    width: 36px;
+    padding: 6px ;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+   }
+    .hd-only{
+        display: none;
+    }
+    .sm-only{
+        display: flex;
+        width: fit-content;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-top: 12px;
+    }
+    .tab-card{
+        display: flex;
+        padding: 12px 12px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 16px 12px;
+        align-self: stretch;
+        flex-wrap: wrap;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        background: rgba(255, 255, 255, 0.03);
+    }
+    .time-location{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 6px;
+        flex-direction: row;
+    }
+    .place{
+        width: 100%;
+        text-align: right;
+    }
+    .active-btn{
+        width: 140px;
+    }
+    .Default-btn{
+        width: 140px;
     }
   
-   
+    input{
+       display: contents;
+    }
+    .date-navigation{
+        justify-content: center;
+        margin-top: 16px;
+    }
+    .Info-card{
+        display: flex;
+        flex-direction: column;
+        width: -webkit-fill-available;
+     
+    }
+    .Card-1, .Card-2, .Card-3{
+        width:  -webkit-fill-available;
+        height: auto;
+        padding: 0 16px;
+     
+    }
+    .card2-text, .card1-text, .card3-text{
+        margin: 16px 0;
+    }
+    .follow-club-title{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 12px;
+    }
+    .features {
+        width: -webkit-fill-available;
+        height: auto;
+        padding: 48px 15px;
+    }
+    .features-cnt {
+        display: flex;
+       
+        gap: 16px;
+        padding: 60px 0;
+        flex-direction: column;
+    }
+    .features-info{
+        width: -webkit-fill-available;
+    }
+
+    .info-heading2{
+        width: auto;
+        font-size: 32px;
+    }
+    .card-p{
+        width: auto;
+    }
+    .features-card{
+        height: auto;
+    }
+    .foot {
+        width: -webkit-fill-available;
+        margin: 32px 15px;
+    }
+    .copyright {
+        margin: 32px 15px 20px 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        gap: 16px;
+    }
+    .Terms{
+        width: -webkit-fill-available ;
+    }
+    .copyright-text{
+        width: -webkit-fill-available;
+
+    }
+    /* streaming page css start here */
+
+    .Container-body{
+        width: -webkit-fill-available;
+    }
+    .video-player {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: -webkit-fill-available;
+    }
+    .Playing-teams{
+        width: -webkit-fill-available;
+        display: flex;
+        flex-direction: column;
+        margin: 0 10px;
+    }
+    .Steam-body{
+        flex-wrap: wrap ;
+        justify-content: center;
+    }
+    .Video-box {
+        height: 100%;
+        width: 100%;
+    }
+    .Heading-pro{
+        font-size: 18px;
+    }
+    .pro {
+       
+        padding: 7px 10px;
+        
+        gap: 10px;
+        border-radius: var(--Special-Gap-01-20, 12px);
+    }
+    .Link-btn {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .Heading-Desclimer{
+        font-size: 28px;
+        text-align: center;
+    }
+    .p{
+        text-align: center;
+    }
+    .follow-club{
+        margin: 28px 0;
+    }
+    .Ad-box{
+        width: auto;
+    }
+
 }
 
-
-@media only screen and (max-width: 767px){
+@media(min-width: 410px){
     body {
         font-size: 14px;
         overflow-x: hidden; !important
@@ -308,5 +601,5 @@ img{
     .Ad-box{
         width: auto;
     }
-    
+
 }
