@@ -1237,8 +1237,396 @@ img{
     .follow-club{
         margin: 28px 0;
     }
+
+    .Ad-iframe {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 24px;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
     .Ad-box{
-        width: auto;
+        width: 48%;
     }
 
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1340px){
+    body {
+        font-size: 15px;
+        overflow-x: hidden; !important
+    }
+    .Grid {
+        margin: 0 15px;
+        max-width: -webkit-fill-available;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        align-items: center;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+        width: -webkit-fill-available;
+        flex-direction: row;
+        align-content: center;
+        gap: 12px;
+    }
+img{
+    max-width: 100%;
+    height: auto;
+}
+    .Logo{
+        height: 30px;
+    }
+
+    .ul{
+        padding: 0;
+       
+    }
+
+    /* .slider-banner img {
+        margin: 0;
+        width: 100%;
+        
+    } */
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        /* padding: 36px 30px; */
+    }
+    .h1{
+            font-size: 36px;
+            font-weight: 600;
+            margin: 0;
+    }
+    .body-regular{
+        font-size: 16px;
+        margin: 0;
+    }
+    .sub-btn{
+        font-size: 12px;
+    }
+    .desktop-only{
+        display: none; 
+        
+    }
+    button{
+        height: 36px;
+    }
+    .carousel-control-prev, .carousel-control-next{
+        display: none;
+    }
+    .carousel-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: clip;
+        max-width: -webkit-fill-available;
+    }
+
+    
+    .carousel-item{
+       max-width: -webkit-fill-available;
+    }
+    
+    /* .carousel-item.prev{
+        margin-right: 16px;   
+        display: none;
+       }
+          
+   
+    .carousel-item.next{
+     margin-left: 16px;   
+     display: none;
+    } */
+        /*
+    .slider-banner {
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }   */
+
+    .tab-container {
+        margin-top: 340px;
+        width: -webkit-fill-available;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .arrow-section{
+            max-width: -webkit-fill-available;
+            align-items: flex-start;
+            display: flex;
+    }
+    .table-head{
+        display: none;
+        
+    }
+    .tab-head{
+        display: flex;
+        justify-content: center;
+    }
+    .tab-content{
+        padding: 0;
+    }
+  .tab-content.active {
+    display: flex;
+    flex-direction: column;
+}
+   .team-score{
+    display: flex;
+    width: -webkit-fill-available;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+   }
+   .team{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+   }
+   .team-name{
+    width: 60px;
+   }
+   .score{
+    display: flex;
+    width: 50px;
+    padding: 6px ;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+   }
+    .hd-only{
+       display: none;
+    }
+    .sm-only {
+        display: flex;
+        width: fit-content;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        margin-top: 12px;
+        flex-wrap: wrap;
+    }
+    .tab-card{
+        display: flex;
+        padding: 10px 12px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 16px 12px;
+        align-self: stretch;
+        flex-wrap: wrap;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        background: rgba(255, 255, 255, 0.03);
+        width: 350px;
+        box-sizing: border-box;
+    }
+    .time-location{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: row;
+    }
+    .place{
+        width: auto;
+        text-align: right;
+    }
+    .active-btn{
+        width: 140px;
+    }
+    .Default-btn{
+        width: 140px;
+    }
+  
+    input{
+       display: contents;
+    }
+    .date-navigation{
+        justify-content: center;
+        margin-top: 16px;
+    }
+    .Info-card{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
+        width: -webkit-fill-available;
+     
+    }
+    .Card-1, .Card-2, .Card-3{
+        width:  350px;
+     
+    }
+    .follow-club-title{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 12px;
+    }
+    .features {
+        width: -webkit-fill-available;
+        height: auto;
+        padding: 0 15px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap ;
+
+    }
+    .features-info{
+        width: 860px;
+    }
+    .features-cnt {
+        display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+        gap: 16px;
+        padding: 60px 0;
+        
+    }
+    /* .features-info{
+        width: -webkit-fill-available;
+    } */
+
+    .info-heading2{
+        width: auto;
+       
+        font-size: 32px;
+    }
+    .card-h{
+        width: auto;
+    }
+    .card-p{
+        width: auto;
+    }
+    .features-card{
+        height: 320px;
+        width: 230px;
+
+    }
+    .foot {
+        width: -webkit-fill-available;
+        margin: 32px 15px;
+    }
+    .copyright {
+        margin: 32px 15px 20px 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        gap: 16px;
+    }
+    .Terms{
+        width: -webkit-fill-available ;
+    }
+    .copyright-text{
+        width: -webkit-fill-available;
+
+    }
+    /* streaming page css start here */
+
+    .Container-body{
+        width: -webkit-fill-available;
+    }
+    .video-player {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: -webkit-fill-available;
+    }
+    .Playing-teams{
+        width: -webkit-fill-available;
+        display: flex;
+        flex-direction: row;
+        padding: 10px 15px;
+    }
+    .Steam-body{
+        flex-wrap: wrap ;
+        justify-content: center;
+    }
+    .Video-box {
+        height: 100%;
+        width: 100%;
+    }
+    .Heading-pro{
+        font-size: 18px;
+    }
+    .pro {
+       
+        padding: 7px 10px;
+        
+        gap: 10px;
+        border-radius: var(--Special-Gap-01-20, 12px);
+    }
+    .Link-btn {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .Heading-Desclimer{
+        font-size: 28px;
+        text-align: center;
+    }
+    .p{
+        text-align: center;
+    }
+    .follow-club{
+        margin: 28px 0;
+    }
+
+    .Ad-iframe {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 24px;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .Ad-box{
+        width: 48%;
+    }
+
+}
+
+
+@media screen and (min-width:2000px) and (max-width:3600px) {
+
+     body {
+        font-size: 18px;
+        overflow-x: hidden; !important
+    }
+    .Grid {
+        margin: 0 200px;
+        max-width: -webkit-fill-available;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        align-items: center;
+    }
+    .foot {
+         width: -webkit-fill-available; 
+        flex-shrink: 0;
+        margin: 48px 200px 30px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        font-size: 18px;
+    }
 }

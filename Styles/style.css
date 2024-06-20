@@ -531,12 +531,15 @@ box-sizing: border-box;
 }
 
 .features {
-    width: 1920px;
-    height: 892px;
+    width: auto;
+    height: auto;
     background: rgba(255, 255, 255, 0.02);
     margin-top: 48px;
     background-image: url(../Assets/Shapes.png);
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .shapes {
@@ -545,15 +548,15 @@ box-sizing: border-box;
     flex-shrink: 0;
 }
 
-.features-cnt{
+.features-cnt {
     display: flex;
-
-justify-content: center;
-align-items: flex-start;
-align-content: flex-start;
-gap: 24px;
-flex-wrap: wrap;
-padding: 124px 300px 70px 300px;
+    justify-content: center;
+    align-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 124px 0 70px 0;
+    width: 1320px;
+    flex-direction: row;
 }
 .features-info{
     display: flex;
@@ -641,11 +644,13 @@ font-weight: 300;
 line-height: 20px; /* 142.857% */
 }
 .foot {
-    width: 1320px;
+    width: 1320px; 
     flex-shrink: 0;
-    margin: 48px 300px 30px;
+    margin: 48px 40px 30px;
     text-align: center;
+    display: flex;
     flex-direction: column;
+    align-content: center;
 }
 
 .text-foot {
@@ -655,7 +660,6 @@ line-height: 20px; /* 142.857% */
     font-size: 14px;
     font-weight: 400;
     line-height: normal;
-    width: 1320px;
     justify-content: center;
 }
 
