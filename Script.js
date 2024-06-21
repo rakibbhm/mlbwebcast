@@ -40,79 +40,94 @@ function showDatePicker() {
     document.getElementById('date-display')._flatpickr.open();
 }
 
-// const prevButton = document.querySelector('.carousel-control-prev');
-// const nextButton = document.querySelector('.carousel-control-next');
-// const carouselInner = document.querySelector('.carousel-inner');
-// const carouselItems = document.querySelectorAll('.carousel-item');
 
-// let currentIndex = 0;
 
-// function updateCarousel() {
-//     const offset = -currentIndex * 100;
-//     carouselInner.style.transform = `translateX(${offset}%)`;
-// }
-
-// prevButton.addEventListener('click', (event) => {
-//     event.preventDefault();
-//     currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselItems.length - 1;
-//     updateCarousel();
-// });
-
-// nextButton.addEventListener('click', (event) => {
-//     event.preventDefault();
-//     currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
-//     updateCarousel();
-// });
-
-document.addEventListener('DOMContentLoaded', function() {
-    const prevButton = document.querySelector('.carousel-control-prev');
-    const nextButton = document.querySelector('.carousel-control-next');
-    const carouselInner = document.querySelector('.carousel-inner');
-    const carouselItems = document.querySelectorAll('.carousel-item');
-
-    if (!prevButton || !nextButton || !carouselInner || carouselItems.length === 0) {
-        console.error('Carousel elements not found');
-        return;
-    }
-    let currentIndex = 0;
-    const totalItems = carouselItems.length;
-    const slideInterval = 3000; // Slide every 3 seconds
-
-    function updateCarousel() {
-        carouselItems.forEach((item, index) => {
-            item.classList.remove('prev', 'active', 'next');
-            if (index === currentIndex) {
-                item.classList.add('active');
-            } else if (index === (currentIndex - 1 + totalItems) % totalItems) {
-                item.classList.add('prev');
-            } else if (index === (currentIndex + 1) % totalItems) {
-                item.classList.add('next');
-            }
-        });
-    }
-
-    function nextSlide() {
-        currentIndex = (currentIndex < totalItems - 1) ? currentIndex + 1 : 0;
-        updateCarousel();
-    }
-
-    function prevSlide() {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalItems - 1;
-        updateCarousel();
-    }
-
-    prevButton.addEventListener('click', (event) => {
-        event.preventDefault();
-        prevSlide();
-    });
-
-    nextButton.addEventListener('click', (event) => {
-        event.preventDefault();
-        nextSlide();
-    });
-
-    setInterval(nextSlide, slideInterval);
-
-    updateCarousel(); // Initial update
+var $imagesCarousel = jQuery('.carouselOfImages').flickity({
+    accessibility: false,
+    autoPlay: false,
+    pauseAutoPlayOnHover: false,
+    cellAlign: 'center',
+    contain: false,
+    draggable: true,
+    friction: 0.2,
+    initialIndex: 0,
+    lazyLoad: false,
+    percentPosition: true,
+    prevNextButtons: false,
+    pageDots: false,
+    resize: true,
+    rightToLeft: false,
+    setGallerySize: true,
+    watchCSS: false,
+    wrapAround: true
 });
+
+function resizeCells() {
+    var flkty = $imagesCarousel.data('flickity');
+    var $current = flkty.selectedIndex;
+    var $length = flkty.cells.length;
+    
+    jQuery('.carouselOfImages .carouselImage').removeClass("nextToSelectedLeft nextToSelectedRight nextToSelectedLeft2 nextToSelectedRight2");
+
+    jQuery('.carouselOfImages .carouselImage').eq(($current - 1 + $length) % $length).addClass("nextToSelectedLeft");
+    jQuery('.carouselOfImages .carouselImage').eq(($current - 2 + $length) % $length).addClass("nextToSelectedLeft2");
+
+    jQuery('.carouselOfImages .carouselImage').eq(($current + 1) % $length).addClass("nextToSelectedRight");
+    jQuery('.carouselOfImages .carouselImage').eq(($current + 2) % $length).addClass("nextToSelectedRight2");
+}
+
+resizeCells();
+
+$imagesCarousel.on('select.flickity', function() {
+    resizeCells();
+});
+
+var autoPlayInterval;
+function startAutoPlay(direction, speed) {
+    clearInterval(autoPlayInterval);
+    autoPlayInterval = setInterval(function() {
+        if (direction === 'left') {
+            $imagesCarousel.flickity('previous');
+        } else if (direction === 'right') {
+            $imagesCarousel.flickity('next');
+        }
+    }, speed);
+}
+
+// HOVER FUNCTIONS
+jQuery('.carouselImage').bind("mouseover", function() {
+    if (this.className.includes('nextToSelectedLeft')) {
+        startAutoPlay('left', 2000); // Slow speed
+    } else if (this.className.includes('nextToSelectedLeft2')) {
+        startAutoPlay('left', 1000); // Fast speed
+    } else if (this.className.includes('nextToSelectedRight')) {
+        startAutoPlay('right', 2000); // Slow speed
+    } else if (this.className.includes('nextToSelectedRight2')) {
+        startAutoPlay('right', 1000); // Fast speed
+    }
+});
+
+jQuery('.carouselImage').bind("mouseout", function() {
+    clearInterval(autoPlayInterval);
+});
+
+
+
+// // Get references to the button and the section
+// const SeeTeam = document.getElementById('seeAllButton'); // Changed variable name
+// const clubImagesSection = document.getElementById('clubImages');
+
+// // Add click event listener to the button
+// SeeTeam.addEventListener('click', function() { // Updated variable name here as well
+//     // Toggle visibility of the clubImagesSection
+//     if (clubImagesSection.style.display === 'none' || clubImagesSection.style.display === '') {
+//         clubImagesSection.style.display = 'flex'; // Show the section
+//         SeeTeam.textContent = 'Hide All'; // Update button text
+//     } else {
+//         clubImagesSection.style.display = 'none'; // Hide the section
+//         SeeTeam.textContent = 'See All'; // Update button text
+//     }
+// });
+
+// script.js
 

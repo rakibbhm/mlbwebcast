@@ -226,6 +226,16 @@ height: 17px;
 
 
 }
+.table-button:hover{
+    color: #6a89f0;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;  
+    background: rgba(71, 91, 207, 0.1);
+    transition: 0.5s linear;
+}
 
 .table-row {
     display: flex;
@@ -440,76 +450,43 @@ line-height: normal;
     gap: 20px;
 }
 .follow-club {
+    width: 100%;
     display: flex;
-    padding: 0;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 32px;
-    align-self: stretch;
-    margin: 48px 0;
-    width: -webkit-fill-available;
-}
-
-.follow-club-title{
-    width: 1042px;
-    color:  #FFF;
-font-family: Inter;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-}
-.clubs-header{
-    display: flex;
-    flex-wrap: wrap;
-padding-right: var(--Text-Gap-Medium-30, 30px);
-justify-content: space-between;
-align-items: center;
-align-self: stretch;
-}
-.arrow-icon{
-    display: flex;
-align-items: center;
-gap: 16px;
-
-}
-.Terms{
-    width: 392px; 
-    text-align: right;
-}
-.copyright-text{
-    width: 392px;
-}
-.arrow-btn{
-    width: 42px;
-    height: 42px;
-    display: flex;
-justify-content: center;
-align-items: center;
-
-}
-
-.arrow-btn:hover{
-    width: 42px;
-    height: 42px;
-    border-radius: 22px;
-    transition: 0.5s;
-    border-radius: var(--Text-Gap-Medium-30, 30px);
-border: 1px solid rgba(108, 141, 246, 0.28);
-background: rgba(93, 153, 253, 0.20);
-display: flex;
-justify-content: center;
-align-items: center;
-}
-.images-club{
-    display: flex;
-    justify-content: center;
     align-items: center;
-    align-content: center;
     gap: 20px;
-    align-self: stretch;
+    margin: 48px 0;
+}
+
+.follow-club-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #E5E8E7;
+}
+.clubs-header {
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.images-club {
+    display: flex; /* Initially visible */
     flex-wrap: wrap;
+    gap: 20px;
+    opacity: 1; /* Fully opaque */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+/* Checkbox Hack */
+#toggle-club-images {
+    display: none; /* Hide the checkbox input */
+}
+
+#toggle-club-images:checked + .images-club {
+    display: none; /* Hide .images-club when checkbox is checked */
+    opacity: 0; /* Fade out */
 }
 .club-single{
     display: flex;
@@ -529,6 +506,15 @@ background: rgba(255, 255, 255, 0.05);
 transition: 0.5s linear;
 box-sizing: border-box;
 }
+
+.Terms{
+    width: 392px; 
+    text-align: right;
+}
+.copyright-text{
+    width: 392px;
+}
+
 
 .features {
     width: auto;
@@ -682,141 +668,38 @@ a:hover {
 
 /* Carousel styles */
 
-.carousel-container {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    gap: 10px;
-    max-width: 850px;
-    margin: auto; /* Center the carousel container */
-}
-.slider-banner {
+.carouselOfImages{
     position: relative;
+    margin: auto;
+    overflow: hidden;
     width: 100%;
-    
-    gap: 24px;
-    margin: auto; /* Center the carousel */
-}
-
-.carousel-inner {
-    display: flex;
-    transition: 0.5s linear;
-    position: relative;
-    width: 300%;
-}
-
-.carousel-item {
-    width: 850px;
-    box-sizing: border-box;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 01.3s ease;
-    z-index: 0;
-    transform: translateX(100%);
-}
-
-.carousel-item.active {
-    opacity: 1;
-    transform: translateX(0);
-    z-index: 1;
-}
-
-.carousel-item.prev {
-    transform: translateX(-100%); /* Position previous item off-screen to the left */
-    opacity: 0.5;
-    z-index: 0;
-}
-
-.carousel-item.next {
-    transform: translateX(100%); /* Position next item off-screen to the right */
-    opacity: 0.5;
-    z-index: 0;
-}
-
-.slider-banner img {
-   margin-left: 24px;
-   width: 98%;
-    height: auto;
-    display: block;
+  }
   
-}
+  .carouselImage {
+      position: relative;
+      height: auto;
+      padding: 16px;
+      counter-increment: carousel-cell;
+      text-align: center;
+      vertical-align: center;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carouselImage.nextToSelectedLeft,
+        .carouselImage.nextToSelectedRight,
+        .carouselImage.nextToSelectedLeft2,
+        .carouselImage.nextToSelectedRight2 {
+            opacity: 0.5;
+        }
+        /* Optional: further reduce opacity for the second level neighbors */
+        .carouselImage.nextToSelectedLeft2,
+        .carouselImage.nextToSelectedRight2 {
+            opacity: 0.3;
+        }
 
 
-/* .carousel-control-prev, .carousel-control-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    
-   
-} */
-.carousel-control-prev, .carousel-control-next{
-    border-radius: 22px;
-    transition: 0.5s;
-    border-radius: var(--Text-Gap-Medium-30, 30px);
-    border: 1px solid rgba(108, 141, 246, 0.28);
-    background: rgba(93, 153, 253, 0.20);
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 26%;
-    transform: translateY(-50%);
-    z-index: 1;
-    padding: 8px 20px;
-    color: #E5E8E7;
-    align-items: center; /* Center the icon vertically */
-    transition: 0.3s linear;
-    backdrop-filter: blur(10px);
-    box-shadow: 3px 3px 16px 0px rgba(0, 0, 0, 0.06);
-}
 
-.carousel-item.prev, .carousel-item.next {
-    opacity: 0.5;
-}
-.carousel-item.prev {
-    transform: translateX(-100%);
-    
-}
 
-.carousel-item.next {
-    transform: translateX(100%);
-}
-.carousel-control-prev {
-    justify-self: start;
-    z-index: 5;
-    left: 300px;
-}
 
-.carousel-control-next {
-    justify-self: end;
-    z-index: 5;
-    right: 300px;
-}
-
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    font-size: 20px;
-}
-
-.sr-only {
-    align-items: center;
-    display: flex;
-   
-    justify-content: flex-end;
-    margin-left: 6px;
-}
-
-.slider-banner{
-    display: flex;
-    
-    gap: 24px;
-}
 
 /* Overlay and text content styles */
 .overlay {
@@ -826,7 +709,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.5s cubic-bezier(0.4, 0, 1, 1);
 }
 
@@ -1194,7 +1077,7 @@ position: absolute;
 .tab-container{
     
         display: flex;
-        margin-top: 350px ;
+        margin-top: 42px ;
         width: -webkit-fill-available;
         justify-content: flex-start;
         flex-direction: column;
