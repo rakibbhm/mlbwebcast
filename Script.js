@@ -111,23 +111,3 @@ jQuery('.carouselImage').bind("mouseout", function() {
     clearInterval(autoPlayInterval);
 });
 
-
-
-// // Get references to the button and the section
-// const SeeTeam = document.getElementById('seeAllButton'); // Changed variable name
-// const clubImagesSection = document.getElementById('clubImages');
-
-// // Add click event listener to the button
-// SeeTeam.addEventListener('click', function() { // Updated variable name here as well
-//     // Toggle visibility of the clubImagesSection
-//     if (clubImagesSection.style.display === 'none' || clubImagesSection.style.display === '') {
-//         clubImagesSection.style.display = 'flex'; // Show the section
-//         SeeTeam.textContent = 'Hide All'; // Update button text
-//     } else {
-//         clubImagesSection.style.display = 'none'; // Hide the section
-//         SeeTeam.textContent = 'See All'; // Update button text
-//     }
-// });
-
-// script.js
-
