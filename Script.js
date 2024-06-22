@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', function() {
     flatpickr("#date-display", {
         dateFormat: "d-m-Y",
@@ -27,6 +25,11 @@ function showTab(tabId, element) {
     element.classList.add('active');
 }
 
+
+
+
+
+
 //Slider carusaoul Content
 
 function changeDate(delta) {
@@ -49,7 +52,7 @@ var $imagesCarousel = jQuery('.carouselOfImages').flickity({
     cellAlign: 'center',
     contain: false,
     draggable: true,
-    friction: 0.2,
+    friction: 0.4,
     initialIndex: 0,
     lazyLoad: false,
     percentPosition: true,
@@ -59,7 +62,7 @@ var $imagesCarousel = jQuery('.carouselOfImages').flickity({
     rightToLeft: false,
     setGallerySize: true,
     watchCSS: false,
-    wrapAround: true
+    wrapAround: true,
 });
 
 function resizeCells() {

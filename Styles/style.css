@@ -286,17 +286,9 @@ height: 17px;
 }
 
 .Card-1 {
-    width: 424px;
-    height: 110px;
-    flex-shrink: 0;
-    border-radius: 20px;
-    display: flex;
-    float: left;
     border: 2px solid rgba(10, 48, 255, 0.83);
     background: rgba(26, 62, 254, 0.11);
     background-image: url(../Assets/Card-2.png);
-    box-sizing: border-box;
-    background-size: cover;
 }
 .arrow-right-s-line{
     display: flex;
@@ -311,13 +303,14 @@ border: 2px solid rgba(55, 114, 250, 0.33);
 background: rgba(255, 255, 255, 0.05);
 
 }
-.card1-text{
+.card1-text, .card2-text, .card3-text{
     display: flex;
 width: 297px;
 flex-direction: column;
 align-items: flex-start;
 gap: 4px; 
-margin-top: 20px;  
+margin: 16px 0;
+
 }
 .c1h{
     color:  #F5F6F6;
@@ -337,19 +330,9 @@ line-height: normal;
 }
 
 .Card-2{
-    width: 424px;
-height: 110px;
-flex-shrink: 0;
 border: 2px solid rgba(252, 238, 19, 0.80);
 background: rgba(252, 238, 19, 0.11);
 background-image: url(../Assets/Card-2.png);
-display: flex;
-float: left;
-border-radius: 20px;
-box-sizing: border-box;
-background-size: cover;
-
-
 
 }
 .arrow-right-s-line-2{
@@ -366,14 +349,13 @@ background: rgba(255, 255, 255, 0.05);
 
 color: #F9E006;
 }
-.card2-text{
+/* .card2-text{
     display: flex;
 width: 297px;
 flex-direction: column;
 align-items: flex-start;
 gap: 4px; 
-margin-top: 20px;  
-}
+} */
 .c2h{
     color:  #F5F6F6;
 font-family: Inter;
@@ -391,19 +373,9 @@ line-height: normal;
     line-height: normal;
 }
 .Card-3{
-    width: 424px;
-height: 110px;
-flex-shrink: 0;
 border: 2px solid rgba(255, 35, 35, 0.70);
 background: rgba(255, 35, 35, 0.11);
 background-image: url(../Assets/card-3.svg);
-display: flex;
-float: left;
-border-radius: 20px;
-box-sizing: border-box;
-background-size: cover;
-
-
 
 }
 .arrow-right-s-line3{
@@ -420,14 +392,13 @@ background: rgba(255, 255, 255, 0.05);
 
 color: #D70000;
 }
-.card3-text{
+/* .card3-text{
     display: flex;
 width: 297px;
 flex-direction: column;
 align-items: flex-start;
-gap: 4px; 
-margin-top: 20px;  
-}
+gap: 4px;  
+} */
 .c3h{
     color:  #F5F6F6;
 font-family: Inter;
@@ -445,9 +416,15 @@ line-height: normal;
     line-height: normal;
 }
 .Card-1, .Card-2, .Card-3{
+    width: 424px;
     align-items: center;
     padding-left: 24px;
     gap: 20px;
+    display: flex;
+    float: left;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-size: cover;
 }
 .follow-club {
     width: 100%;
@@ -465,7 +442,7 @@ line-height: normal;
     color: #E5E8E7;
 }
 .clubs-header {
-    width: -webkit-fill-available;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -474,6 +451,7 @@ line-height: normal;
 .images-club {
     display: flex; /* Initially visible */
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     opacity: 1; /* Fully opaque */
     transition: opacity 0.3s ease; /* Smooth transition for opacity */
