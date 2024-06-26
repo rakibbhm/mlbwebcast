@@ -418,7 +418,7 @@ line-height: normal;
 .Card-1, .Card-2, .Card-3{
     width: 424px;
     align-items: center;
-    padding-left: 24px;
+    padding: 0 24px 0 16px;
     gap: 20px;
     display: flex;
     float: left;

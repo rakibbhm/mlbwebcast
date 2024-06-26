@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     flatpickr("#date-display", {
-        dateFormat: "d-m-Y",
+        dateFormat: "Y-m-d",
         onChange: function(selectedDates, dateStr, instance) {
             document.getElementById('date-display').textContent = dateStr;
         }
@@ -26,12 +26,6 @@ function showTab(tabId, element) {
 }
 
 
-
-
-
-
-//Slider carusaoul Content
-
 function changeDate(delta) {
     var dateDisplay = document.getElementById('date-display');
     var currentDate = new Date(dateDisplay.textContent);
@@ -44,7 +38,7 @@ function showDatePicker() {
 }
 
 
-
+//Slider carusaoul Content
 var $imagesCarousel = jQuery('.carouselOfImages').flickity({
     accessibility: false,
     autoPlay: false,
